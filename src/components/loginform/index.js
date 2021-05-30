@@ -24,6 +24,7 @@ export default function LoginForm (showForm, props){
             localStorage.setItem("nome", res.data.nome);
             localStorage.setItem("id", res.data.id);
             localStorage.setItem("email", res.data.email);
+            localStorage.setItem("empresa", res.data.empresa);
             history.push('/principal')
          } else {
             alert(res.data.message);

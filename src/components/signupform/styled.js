@@ -97,14 +97,14 @@ export const StyledSelect = styled.select`
 export const StyledButton = styled.button`
    width: 312px;
    height: 44px;
-   paddin: 10px;
+   padding: 10px;
    margin-top: 5px;
    background: #1362FF;
    outline: none;
    overflow: hidden;
    border:none;
    border-radius: 12px;
-   cursor:pointer;
+   cursor: pointer;
    font-family: Mulish;
    font-style: normal;
    font-weight: bold;

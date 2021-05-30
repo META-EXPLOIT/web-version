@@ -86,7 +86,7 @@ export const StyledBtn = styled.button`
    background-color: Transparent;
    background-repeat:no-repeat;
    border: none;
-   cursor:pointer;
+   cursor: pointer;
    overflow: hidden;
    outline:none;
 
