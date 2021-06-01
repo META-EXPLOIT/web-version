@@ -9,7 +9,7 @@ const BarChartG = ({dados}) => {
             datasets:[
                {
                   label:'quantidade',
-                  data: dados,
+                  data: [28,23,1,2,0],
                   backgroundColor: [
                      '#1DD200',
                      '#6196FF',

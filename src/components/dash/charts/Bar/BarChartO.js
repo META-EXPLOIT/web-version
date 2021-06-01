@@ -9,7 +9,7 @@ const BarChartO = ({dados}) => {
             datasets:[
                {
                   label:'quantidade',
-                  data: dados,
+                  data: [39,4,9,1,1],
                   backgroundColor: [
                      '#1DD200',
                      '#6196FF',

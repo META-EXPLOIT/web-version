@@ -36,15 +36,15 @@ export default function Charts  () {
             <div className="barras">
             <h4>Nota geral da empresa</h4>
                <p>Promotores</p>
-               <StatusBar bgColor="#D7FCD1" fillerColor="#1DD200" completed={60}/>
+               <StatusBar bgColor="#D7FCD1" fillerColor="#1DD200" completed={30}/>
                <p>Neutros</p>
-               <StatusBar bgColor="#FFF2DB" fillerColor="#FFBC42" completed={10}/>
+               <StatusBar bgColor="#FFF2DB" fillerColor="#FFBC42" completed={7}/>
                <p>Detratores</p>
-               <StatusBar bgColor="#F6A2A2" fillerColor="#F05C5C" completed={30}/>
+               <StatusBar bgColor="#F6A2A2" fillerColor="#F05C5C" completed={17}/>
             </div>
             <div className='progresso'>
                <h4>NPS</h4>
-               <h1>70</h1>
+               <h1>37</h1>
             </div>
          </StatusCard>
          <NpsGrupos>

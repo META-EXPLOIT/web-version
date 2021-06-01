@@ -9,7 +9,7 @@ const BarChartPCD = ({dados}) => {
             datasets:[
                {
                   label:'quantidade',
-                  data: dados,
+                  data: [1,2,0,0,0],
                   backgroundColor: [
                      '#1DD200',
                      '#6196FF',

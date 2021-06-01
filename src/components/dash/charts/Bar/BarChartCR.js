@@ -11,7 +11,7 @@ const BarChartCR = ({dados}) => {
             datasets:[
                {
                   label:'quantidade',
-                  data: dados,
+                  data: [27,22,3,1,1],
                   backgroundColor: [
                      '#1DD200',
                      '#6196FF',
