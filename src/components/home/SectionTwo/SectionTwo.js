@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyledDiv, StyledCardImg, StyledImage, StyledCard, CardContent } from './styled_st.js';
+import { StyledButton } from '../SectionOne/styled_so';
 import image from '../../../assets/images/free-love.svg';
 
 export default function SectionTwo () {
@@ -10,8 +11,9 @@ export default function SectionTwo () {
                <StyledImage src={image}/>
             </StyledCardImg>
             <StyledCard>
-               <h2>O que é a diversight?</h2>
-               <CardContent>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim dictum congue tincidunt mi quis non quam dictumst. Facilisis diam orci, morbi parturient lobortis magna iaculis. Scelerisque quis urna, justo, suscipit. Et feugiat et aliquam ut id in augue.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim dictum congue tincidunt mi quis non quam dictumst. Facilisis diam orci, morbi parturient lobortis magna iaculis. Scelerisque quis urna, justo, suscipit. Et feugiat et aliquam ut id in augue.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim dictum congue tincidunt mi quis non quam dictumst. Facilisis diam orci, morbi parturient lobortis magna iaculis.</CardContent>
+               <h2>O que é a Diversight?</h2>
+               <CardContent>A Diversight é uma ferramenta de diagnóstico de pluralidade de empresas. Através da nossa solução é possível extrair dados que auxiliem na criação e manutenção de um ambiente de trabalho mais agradável para colaboradores diversos.</CardContent>
+               <StyledButton className='btn'>Entre em contato</StyledButton>
             </StyledCard>
          
          </StyledDiv>

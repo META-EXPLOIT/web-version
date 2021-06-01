@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { StyledInput, StyledLabel, FormWrapper, StyledSelect, StyledButton, Container, StyledHeaderDiv, StyledParagraph } from './styled.js';
+import React from 'react';
+import { StyledInput, StyledLabel, FormWrapper, StyledSelect, StyledButton, Container, StyledHeaderDiv } from './styled.js';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
@@ -48,7 +48,7 @@ const schema = yup.object().shape({
  });
 
 export default function SignForm (props){
-   const { register, handleSubmit, formState:{ errors } } = useForm({
+   const { register, handleSubmit } = useForm({
       resolver: yupResolver(schema)
    });
    let history = useHistory();
@@ -71,6 +71,7 @@ export default function SignForm (props){
             localStorage.setItem("nome", res.data.nome);
             localStorage.setItem("id", res.data.id);
             localStorage.setItem("email", res.data.email);
+            localStorage.setItem("empresa", res.data.empresa);
             history.push('/principal')
          } else {
             alert(res.data.message);

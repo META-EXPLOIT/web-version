@@ -6,14 +6,14 @@ import { useHistory } from "react-router-dom";
 
 
 export default function LoginForm (showForm, props){
-   const { register, handleSubmit, watch, formState: { errors } } = useForm();
+   const { register, handleSubmit } = useForm();
    let history = useHistory();
    const onSubmit = (data, event) => {
       event.preventDefault();
       console.log(data)
       api({
          method: 'post',
-         url: '/user_login',
+         url: '/rh_login',
          data: {
             email: data.email,
             senha: data.senha
@@ -54,10 +54,7 @@ export default function LoginForm (showForm, props){
                {...register('senha')}
                {...props}
                />
-               <div className='buttons'>
-                  <StyledButton type="submit">Entrar</StyledButton>
-                  <StyledBtn onClick={() => (showForm = false)}>Cadastrar</StyledBtn>
-               </div>
+               <StyledButton type="submit">Entrar</StyledButton>
             </FormWrapper>
          </Container>
       );

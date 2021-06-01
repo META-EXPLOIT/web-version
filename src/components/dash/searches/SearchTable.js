@@ -12,6 +12,11 @@ export const SearchTable = () => {
   dados1 = JSON.parse(dados1); 
   const data = useMemo(() => dados1, []);
 
+  const checkSelect = () => {
+    selectedFlatRows: selectedFlatRows.map((row) => row.original);
+    console.log(selectedFlatRows.nome);
+  }
+
   const {
     getTableProps, 
     getTableBodyProps, 
@@ -76,13 +81,15 @@ export const SearchTable = () => {
     </table>
       <pre>
         <code>
-          {JSON.stringify(
+          {
+            checkSelect,
+            console.log(JSON.stringify(
             {
               selectedFlatRows: selectedFlatRows.map((row) => row.original),
             },
             null,
             2
-          )}
+          ))}
         </code>
       </pre>
     </>

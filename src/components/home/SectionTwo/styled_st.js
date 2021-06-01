@@ -35,14 +35,23 @@ margin-top: 196px;
 
 background: #F8F8F8;
 border-radius: 0px 12px 12px 12px;
+h2 {
+   margin-left: 30px;
+   font-size: 32px;
+   line-height: 40px;
+}
+.btn {
+   margin-top: 50px;
+   margin-left: 40px;
+}
 `;
 
 export const CardContent = styled.p`
 font-family: Mulish;
 font-style: normal;
 font-weight: normal;
-font-size: 16px;
-line-height: 24px;
+font-size: 22px;
+line-height: 32px;
 
 margin-left: 30px;
 margin-right: 30px;

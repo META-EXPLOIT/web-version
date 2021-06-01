@@ -1,13 +1,17 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-width: 100%;
-height: 100%;
-padding-top: 146px;
-padding-left: 15%;
+padding-left: 30px;
 background: #F7F8FC;
-z-index: -10;
+z-index: 10;
 text-align: left;
+display: flex;
+flex-direction: column;
+
+div {
+   display: flex;
+flex-direction: column;
+}
 
 .h2 {
    font-family: Mulish;

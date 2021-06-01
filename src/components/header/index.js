@@ -1,6 +1,6 @@
 import { AppBar, withStyles, Toolbar, makeStyles, Button } from "@material-ui/core";
 import React, { useState } from "react";
-import DisLogo from './logo.svg';
+import DisLogo from '../../assets/icons/logo.svg';
 import {Modal} from '../modal/Modal.js'
 import { GlobalStyle } from "../globalStyles";
 import styled from 'styled-components';
@@ -38,6 +38,9 @@ const ColorButton = withStyles((theme) => ({
      backgroundColor: "#FFBC42",
      textTransform: 'unset !important',
      width: '140px',
+     '&:hover': {
+        backgroundColor:"#FFBC42",
+     }
    },
  }))(Button);
 
@@ -69,12 +72,12 @@ export default function Header() {
 
    const openModals = () => {
       setShowModal(prev => !prev);
-      if (showForm == true) setShowForm(false);
+      if (showForm === true) setShowForm(false);
    };
 
    const openModall = () => {
       setShowModal(prev => !prev);
-      if (showForm == false) setShowForm(true);
+      if (showForm === false) setShowForm(true);
    };
 
    return(

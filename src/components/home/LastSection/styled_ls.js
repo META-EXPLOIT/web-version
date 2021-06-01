@@ -16,6 +16,10 @@ line-height: 50px;
 color: #F8F8F8;
 padding-top: 48px;
 margin-bottom: 88px;
+text-align: center;
+.t2 {
+   margin-bottom: 44px;
+}
 `;
 
 export const CardsContainer = styled.div`

@@ -11,22 +11,22 @@ export default function SectionOne(){
       <StyledDiv>
          <StyledContent>
             <StyledTitle className='text'>Diversight <br/>sua empresa mais diversa</StyledTitle>
-            <StyledSubtitle className='text'>Analise diárias sobre o humor e sentimentos de seus colaboradores, torne sua empresa mais diversa e produtiva.</StyledSubtitle>
-            <StyledButton>Cadastrar-se</StyledButton>
+            <StyledSubtitle className='text'>Torne sua empresa mais diversa através de diagnósticos precisos e dados acionáveis. </StyledSubtitle>
+            <StyledButton>Conhecer a plataforma</StyledButton>
          </StyledContent>
          <ContentImg src={image}/>
          <CardContainer>
             <StyledCard>
-               <CardIcon src={nps_icon}/>
-               <p className='sub'>Análise NPS</p>
+               <CardIcon src={plus_icon}/>
+               <p className='sub'>Contrate diversidade</p>
             </StyledCard>
             <StyledCard>
                <CardIcon src={smile_icon}/>
-               <p className='sub'>Humor Diário</p>
+               <p className='sub'>Mantenha diversidade</p>
             </StyledCard>
             <StyledCard>
-               <CardIcon src={plus_icon}/>
-               <p className='sub'>Admissional</p>
+               <CardIcon src={nps_icon}/>
+               <p className='sub'>Calcule<br/>diversidade</p>
             </StyledCard>
          </CardContainer>
       </StyledDiv>

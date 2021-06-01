@@ -8,20 +8,24 @@ import api from '../../../../services/api.js';
 
 
 export const UsersTable = () => {
-
+  var dados1;
    api({
-      method: 'get',
-      url: '/users',
+      method: 'post',
+      url: '/list_colabs',
+      data: {
+        empresa: "ioasys"
+      }
    }).then((res) => {
       console.log(res.data);
+      dados1 = res.data;
    })
    .catch((error) => console.log(error)
    )
 
   const columns = useMemo(() => colunas, []);
-  var dados1 = JSON.stringify(dados);
-  dados1 = JSON.parse(dados1); 
+   // dados1 = dados;
   const data = useMemo(() => dados1, []);
+
 
   const {
     getTableProps, 

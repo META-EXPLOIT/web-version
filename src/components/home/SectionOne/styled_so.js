@@ -95,7 +95,6 @@ flex-direction: column;
 margin-bottom: 24px;
 align-items: center;
 justify-content: center;
-
 background: #1362FF;
 border-radius: 20px;
 
@@ -105,7 +104,7 @@ font-style: normal;
 font-weight: bold;
 font-size: 20px;
 line-height: 32px;
-
+text-align: center;
 color: #F8F8F8;
 }
 `;

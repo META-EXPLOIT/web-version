@@ -2,7 +2,6 @@ import React from 'react';
 import { StyledHeader, FlatButton, UserButton } from './styled_header.js';
 import logo from '../../../assets/icons/logo.svg';
 import avatar from '../../../assets/images/avatar.svg';
-import { useHistory } from "react-router-dom";
 
 export default function Header (props) {
    return (

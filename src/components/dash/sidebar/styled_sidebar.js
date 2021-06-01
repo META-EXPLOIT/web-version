@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const StyledBarDiv = styled.div`
-height: 100%;
-width: 15%;
+width: 246px;
+min-height: 100vh;
 top: 100px;
 position: absolute;
 display: flex;

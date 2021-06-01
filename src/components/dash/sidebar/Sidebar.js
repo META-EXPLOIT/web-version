@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { StyledBarDiv, SideButtonB, SideButtonA } from './styled_sidebar.js';
 import dash_icon_a from '../../../assets/icons/dash_icon_a.svg';
 import dash_icon_b from '../../../assets/icons/dash_icon_b.svg';

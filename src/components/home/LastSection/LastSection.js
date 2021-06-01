@@ -13,15 +13,15 @@ export default function LastSection () {
             <CardsContainer>
                <StyledCard>
                   <CardIcon src={board1}/>
-                  <p className="sub">Pesquisa admissional e demissional</p>
+                  <p className="sub">Experiência admissional e demissional</p>
                </StyledCard>
                <StyledCard>
                   <CardIcon src={smile2}/>
-                  <p className='sub'>Saiba o humor diário de seus funcionários</p>
+                  <p className='sub'>Humor diário de seus colaboradores</p>
                </StyledCard>
                <StyledCard>
                   <CardIcon src={satisfacao3} />
-                  <p className='sub'>Satisfação semanal</p>
+                  <p className='sub'>Satisfação semanal com o trabalho</p>
                </StyledCard>
                <StyledCard>
                   <CardIcon src={nps4} />
