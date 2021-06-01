@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import BarChartCR from './Bar/BarChartCR.js';
 import BarChartG from './Bar/BarChartG.js';
 import BarChartO from './Bar/BarChartO.js';
@@ -7,13 +7,46 @@ import DonutChartCR from './Donut/DonutChartCR.js';
 import DonutChartG from './Donut/DonutChartG.js';
 import DonutChartO from './Donut/DonutChartO.js';
 import DonutChartPCD from './Donut/DonutChartPCD.js';
+import StatusBar from './StatusBar/StatusBar.js';
+import api from '../../../services/api.js';
 
-import { BarWrapper, RowContainer, NpsGrupos, DadosGrupos, DonutCard, Wrapper } from './styled_charts';
+import { BarWrapper, RowContainer, NpsGrupos, DadosGrupos, DonutCard, Wrapper, StatusCard } from './styled_charts';
+
 
 export default function Charts  () {
+   const [ data, setData ] = useState([]);
+
+   useEffect(() => {
+      api({
+          method: 'get',
+          url: '/dashboard',
+       }).then((res) => {
+          setData(res.data); // data = res.data
+          console.log(data);
+        })
+       .catch((error) => console.log(error)
+       )
+    },[]) 
+
+
    return (
       <Wrapper>
          <h2>Dashboard</h2>
+         <StatusCard>
+            <div className="barras">
+            <h4>Nota geral da empresa</h4>
+               <p>Promotores</p>
+               <StatusBar bgColor="#D7FCD1" fillerColor="#1DD200" completed={60}/>
+               <p>Neutros</p>
+               <StatusBar bgColor="#FFF2DB" fillerColor="#FFBC42" completed={10}/>
+               <p>Detratores</p>
+               <StatusBar bgColor="#F6A2A2" fillerColor="#F05C5C" completed={30}/>
+            </div>
+            <div className='progresso'>
+               <h4>NPS</h4>
+               <h1>70</h1>
+            </div>
+         </StatusCard>
          <NpsGrupos>
             <h3>NPS por grupos</h3>
             <RowContainer>
@@ -23,16 +56,16 @@ export default function Charts  () {
                </BarWrapper>
                <BarWrapper>
                <h3>NPS Gênero</h3>
-                  <BarChartG/>
+                  <BarChartG />
                </BarWrapper>
                <BarWrapper>
                <h3>NPS Orientação</h3>
-                  <BarChartO/>
+                  <BarChartO />
                </BarWrapper>
             </RowContainer>
             <BarWrapper>
                <h3>NPS PCD</h3>
-                  <BarChartPCD/>
+                  <BarChartPCD />
             </BarWrapper>
          </NpsGrupos>
          <DadosGrupos>

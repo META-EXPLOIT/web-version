@@ -1,8 +1,7 @@
 [
   { "nome": "Pesquisa NPS", "data": "26/05/2021", "colaboradores": 100},
   { "nome": "Pesquisa Admissional", "data": "26/05/2021", "colaboradores": 10},
-  { "nome": "Pesquisa Demissional", "data": "26/05/2021", "colaboradores": 5},
-  { "nome": "Pesquisa X", "data": "26/05/2021", "colaboradores": 5}
+  { "nome": "Pesquisa Demissional", "data": "26/05/2021", "colaboradores": 5}
 ]
 
  

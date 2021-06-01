@@ -10,7 +10,7 @@ flex-direction: column;
 
 div {
    display: flex;
-flex-direction: column;
+   flex-direction: column;
 }
 
 .h2 {
@@ -27,6 +27,7 @@ flex-direction: column;
 export const StyledButton = styled.button`
 width: 107px;
 height: 32px;
+margin-top: 15px;
 
 background: #1362FF;
 

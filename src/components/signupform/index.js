@@ -10,34 +10,44 @@ import api from '../../services/api.js';
 const options = [
    {
       id: '1',
-      label: "Estágiario",
-      value: "estagiário",
+      label: "Estágio",
+      value: "Estagiário",
    },
    {
       id: '2',
-      label: "Assistente",
-      value: "assistente",
+      label:"Trainee",
+      value: "Trainee",
    },
    {
       id: '3',
-      label: "Analista",
-      value: "analista",
+      label: "Assistente",
+      value: "Assistente",
    },
    {
       id: '4',
-      label: "Supervisor",
-      value: "supervisor",
+      label: "Analista",
+      value: "Analista",
    },
    {
       id: '5',
-      label: "Coordenador",
-      value: "coordenador",
+      label: "Supervisão",
+      value: "Supervisor",
    },
    {
       id: '6',
-      label: "Gerente",
-      value: "gerente",
+      label: "Coordenação",
+      value: "Coordenador",
    },
+   {
+      id: '7',
+      label: "Gerente",
+      value: "Gerente",
+   },
+   {
+      id: '8',
+      label: 'Direção',
+      value: "Diretor",
+   }
 ];
 
 
@@ -100,7 +110,7 @@ export default function SignForm (props){
                type='email'
                {...register('email')}
                {...props}/>
-               <StyledLabel htmlfor='cargo'>Cargo</StyledLabel>
+               <StyledLabel htmlfor='cargo'>Cargo/Posição</StyledLabel>
                <StyledSelect 
                name='cargo'
                placeholder='Selecionar'

@@ -14,7 +14,7 @@ h3{
 }
 h2{
    font-family: Mulish;
-   margin-left: 17px;
+   margin-left: 20px;
    font-weight: bold;
    font-size: 28px;
    line-height: 33px;
@@ -36,7 +36,7 @@ display:flex;
 flex-direction: column;
 align-items: center;
 
-margin-left: 17px;
+margin-left: 20px;
 margin-right: 15px;
 margin-bottom: 24px;
 `;
@@ -53,7 +53,7 @@ width: calc(100vw - 246px);
 display: flex;
 flex-direction: column;
 h3 {
-   margin-left: 17px;
+   margin-left: 20px;
 }
 `;
 
@@ -69,7 +69,7 @@ display:flex;
 flex-direction: column;
 align-items: center;
 
-margin-left: 17px;
+margin-left: 20px;
 margin-right: 15px;
 margin-bottom: 24px;
 `;
@@ -79,6 +79,66 @@ width: calc(100vw - 246px);
 display: flex;
 flex-direction: column;
 h3 {
-   margin-left: 17px;
+   margin-left: 20px;
+}
+`;
+
+export const StatusCard = styled.div`
+width: 765px;
+height: 334px;
+
+background: #FFFFFF;
+
+border: 1px solid #DAE6FF;
+box-sizing: border-box;
+border-radius: 12px;
+margin-left: 20px;
+
+justify-content: space-between;
+
+.progresso {
+   margin-top: 45px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-right: 144px;
+}
+
+h1{
+   font-family: Mulish;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 60px;
+   line-height: 48px;
+
+   display: flex;
+   align-items: center;
+
+   color: #6196FF;
+}
+
+.barras{
+   p {
+      font-family: Mulish;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 16px;
+   
+      color: #434343;
+   }
+   flex-direction: column;
+   margin-left: 26px;
+}
+
+h4{
+   font-family: Mulish;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 22px;
+   line-height: 32px;
+   margin-bottom: 15px;
+
+   color: #434343;
 }
 `;

@@ -5,7 +5,7 @@ const DonutChartPCD = () => {
    return <>
          <Doughnut 
             data={{
-            labels:['Visual', 'Física', 'Auditiva', 'Intelectual', 'Psicossocial','Reabilitado','Não se aplica'],
+            labels:['Visual', 'Física', 'Auditiva', 'Intelectual', 'Psicossocial','Reabilitado'],
             datasets: [
                {
                label: 'quantidade',

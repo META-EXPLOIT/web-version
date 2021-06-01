@@ -1,7 +1,7 @@
 import React from 'react';
 import { Bar }  from 'react-chartjs-2'
 
-const BarChartPCD = () => {
+const BarChartPCD = ({dados}) => {
    return <>
       <Bar
          data={{
@@ -9,7 +9,7 @@ const BarChartPCD = () => {
             datasets:[
                {
                   label:'quantidade',
-                  data:[35,25,25,20,10, 0, 10],
+                  data: dados,
                   backgroundColor: [
                      '#1DD200',
                      '#6196FF',

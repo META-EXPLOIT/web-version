@@ -3,10 +3,8 @@ import styled from 'styled-components';
 export const StyledBarDiv = styled.div`
 width: 246px;
 min-height: 100vh;
-top: 100px;
-position: absolute;
 display: flex;
-padding-top: 80px;
+padding-top: 180px;
 background: #FDFDFD;
 flex-direction: column;
 `;
@@ -18,7 +16,7 @@ align-items: center;
 justify-content: space-evenly;
 padding: 8px 0px 8px 0px;
 
-width: auto;
+width: 246px;
 height: 56px;
 left: 0px;
 

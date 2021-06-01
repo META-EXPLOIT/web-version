@@ -1,95 +1,60 @@
-import React, { useMemo } from 'react';
-import { useTable, useRowSelect } from 'react-table';
+import React, { useState, useEffect } from 'react';
 import dados from './example-data.json';
-import Checkbox from './Checkbox.js';
-import { colunas } from './colunas.js';
 import { Wrapper } from './styled_userstab';
 import api from '../../../../services/api.js';
 
 
-export const UsersTable = () => {
-  var dados1;
-   api({
-      method: 'post',
-      url: '/list_colabs',
-      data: {
-        empresa: "ioasys"
-      }
-   }).then((res) => {
-      console.log(res.data);
-      dados1 = res.data;
-   })
-   .catch((error) => console.log(error)
-   )
+export const UsersTable = ({setSelecionado}) => {
+  const [ data, setData ] = useState([]);
 
-  const columns = useMemo(() => colunas, []);
-   // dados1 = dados;
-  const data = useMemo(() => dados1, []);
+  useEffect(() => {
+    api({
+        method: 'post',
+        url: '/list_colabs',
+        data: {
+          empresa: "ioasys"
+        }
+     }).then((res) => {
+        console.log(res.data);
+        setData(res.data);
+      })
+     .catch((error) => console.log(error)
+     )
+  },[])
 
-
-  const {
-    getTableProps, 
-    getTableBodyProps, 
-    headerGroups, 
-    rows, 
-    prepareRow,
-    selectedFlatRows,
-  } = useTable({
-    columns,
-    data,
-  }, 
-  useRowSelect,
-  (hooks) => {
-    hooks.visibleColumns.push((columns) => {
-      return [
-        {
-          id: 'selection',
-          Header: ({getToggleAllRowsSelectedProps}) => (
-            <Checkbox {...getToggleAllRowsSelectedProps()} />
-          ),
-          Cell: ({row}) => (
-            <Checkbox {...row.getToggleRowSelectedProps()} />
-          )
-        },
-        ...columns
-      ]
-    })
-  }
+  const [checkedState, setCheckedState] = useState(
+    new Array(data.length).fill(false)
   );
+
+  const handleOnChange = (position) => {
+    setSelecionado(data[position].nome);
+    const updatedCheckedState = checkedState.map((item, index) =>
+      (index === position) ? !item : item
+    );
+    setCheckedState(updatedCheckedState); 
+  };
 
   return (
   <Wrapper>
-    <table {...getTableProps()}>
-      <thead>
+    <table>
+      <tr>
+        <th></th>
+        <th>Nome</th>
+        <th>Cargo</th> 
+      </tr>
         {
-          headerGroups.map(headerGroup => (
-            <tr {...headerGroup.getHeaderGroupProps()}>
-              {
-                headerGroup.headers.map( column => (
-                <th {...column.getHeaderProps()}>{column.render('Header')}</th>
-                ))
-              }
-              
-            </tr>
+          data.map((item, index) => (
+          <tr key={index}>
+            <td>
+              <input id={index} type='checkbox' value={item.nome} checked={checkedState[index]} onChange={() => handleOnChange(index)}/>
+            </td>
+            <td>{item.nome}</td>
+            <td>{item.cargo}</td>
+          </tr> 
           ))
         }
-      </thead>
-      <tbody {...getTableBodyProps()}>
-        {
-          rows.map(row => {
-            prepareRow(row)
-            return(
-              <tr {...row.getRowProps()}>
-                {row.cells.map((cell) => {
-                  return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
-                })}
-              </tr>
-            )
-          })
-        }
-      </tbody>
     </table>
-    </Wrapper>
+  </Wrapper>
   );
 }
 

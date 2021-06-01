@@ -1,7 +1,9 @@
 import React from 'react';
 import { Bar }  from 'react-chartjs-2'
 
-const BarChartCR = () => {
+const BarChartCR = ({dados}) => {
+
+ //  console.log("--------Dados: ", dados);
    return <>
       <Bar
          data={{
@@ -9,7 +11,7 @@ const BarChartCR = () => {
             datasets:[
                {
                   label:'quantidade',
-                  data:[35,25,25,20,10],
+                  data: dados,
                   backgroundColor: [
                      '#1DD200',
                      '#6196FF',
