@@ -28,7 +28,6 @@ export default function Charts  () {
        )
     },[]) 
 
-
    return (
       <Wrapper>
          <h2>Dashboard</h2>

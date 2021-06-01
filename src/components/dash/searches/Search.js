@@ -5,7 +5,7 @@ import Dash from '../dashboard/Dash';
 
 export default function Search () {
    const [ showModal, setShowModal ] = useState(false);
-   const [ isNPS, setIsNPS ] = useState(false);
+   const [ isNPS, setIsNPS ] = useState(1);
 
 
    const openModal = () => {
@@ -15,10 +15,12 @@ export default function Search () {
    console.log(isNPS);
 
    function handleClick() {
-      if (isNPS === false) {
-         openModal();
-      } else {
+      if (isNPS === 0) {
          alert("Pesquisa de NPS enviada com sucesso");
+      } else if (isNPS === 1){
+         openModal();
+      } else if (isNPS === 2) {
+         openModal();
       }
    }
 
@@ -28,7 +30,7 @@ export default function Search () {
          <div>
             <SearchTable setIsNPS={setIsNPS}/>
             <StyledButton onClick={handleClick}>Enviar</StyledButton>
-            <Dash showModal={showModal} setShowModal={setShowModal}/>
+            <Dash isNPS={isNPS} showModal={showModal} setShowModal={setShowModal}/>
          </div>
       </Wrapper>
    )

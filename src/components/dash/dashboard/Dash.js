@@ -3,11 +3,15 @@ import { Background, ModalWrapper, ModalContent, CloseModalButton, StyledButton 
 import UsersTable from './table/UsersTable';
 
 
-export const Dash = ({showModal, setShowModal}) => {
+export const Dash = ({isNPS, showModal, setShowModal}) => {
   const [ selecionado, setSelecionado ] = useState("");
 
    function handleClick() {
-      alert("Pesquisa enviada para ", selecionado, " com sucesso");
+      if (isNPS === 1) {
+         alert("Pesquisa admissional enviada com sucesso");
+      } else if (isNPS === 2) {
+         alert("Pesquisa demissional enviada com sucesso");
+      }
    }
 
 

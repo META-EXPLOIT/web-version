@@ -13,7 +13,7 @@ export const SearchTable = ({setIsNPS}) => {
   );
 
   const handleOnChange = (position) => {
-    position === 0 ? setIsNPS(true) : setIsNPS(false); 
+    setIsNPS(position);
     const updatedCheckedState = checkedState.map((item, index) =>
       (index === position) ? !item : item
     );
